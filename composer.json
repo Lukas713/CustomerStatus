@@ -1,0 +1,25 @@
+{
+    "name": "crode/module-customer-status",
+    "description": "Module that adds Customer Status, for testing purposes only!",
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "version": "1.0.0",
+    "require": {
+        "php": "~7.4.0",
+        "magento/framework": "103.0.*",
+        "magento/module-customer": "103.0.*",
+        "magento/module-eav": "102.1.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Crode\\CustomerStatus\\": ""
+        }
+    }
+}
+

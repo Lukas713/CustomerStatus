@@ -1,0 +1,25 @@
+<?php
+/**
+ * @var \Magento\Framework\Escaper $escaper
+ */
+?>
+    <li class="customer_status" data-bind="scope: 'customer_status'">
+        <!-- ko if: customer().customer_status  -->
+        <span class="logged-in"
+              data-bind="text: new String('<?= $escaper->escapeHtml(__('%1')) ?>').replace('%1', customer().customer_status)">
+        </span>
+        <!-- /ko -->
+    </li>
+    <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "customer_status": {
+                        "component": "Magento_Customer/js/view/customer"
+                    }
+                }
+            }
+        }
+    }
+    </script>
